@@ -1,11 +1,11 @@
 # Penetration Test Report
 ### testphp.vulnweb.com &nbsp;·&nbsp; Feb 20 – Mar 1, 2026
 
----
+
 
 A full-scope web application assessment conducted against `testphp.vulnweb.com`, following **NIST SP 800-115** and the **OWASP Testing Guide v4**. The engagement surfaced a cluster of critical and high-severity weaknesses — ranging from injectable endpoints to plaintext credentials sitting in public directories.
 
----
+
 
 ## What Was Found
 
@@ -21,7 +21,7 @@ A full-scope web application assessment conducted against `testphp.vulnweb.com`,
 | 8 | Sensitive info disclosure | `/admin` | `HIGH` |
 | 9 | Sensitive info disclosure | `/CVS` | `HIGH` |
 
----
+
 
 ## The Headline Issues
 
@@ -31,7 +31,7 @@ A full-scope web application assessment conducted against `testphp.vulnweb.com`,
 
 **PHP 5.6.40** — End-of-life since December 2018. No patches, no fixes, known RCE vectors. The foundation the app runs on is itself a liability.
 
----
+
 
 ## Tooling
 
@@ -40,7 +40,7 @@ A full-scope web application assessment conducted against `testphp.vulnweb.com`,
 - **Gobuster / FFUF** — directory and endpoint fuzzing  
 - **Manual testing** — logic flaws, verification, edge cases
 
----
+
 
 ## Fix It
 
@@ -65,7 +65,7 @@ A full-scope web application assessment conducted against `testphp.vulnweb.com`,
 - Enforce a patch cadence
 - Secure development training for the team
 
----
+
 
 ## Severity Reference
 
@@ -76,24 +76,6 @@ A full-scope web application assessment conducted against `testphp.vulnweb.com`,
 | Medium | 4.0 – 6.9 |
 | Low | 0.1 – 3.9 |
 
----
 
-## Repository Layout
-
-```
-/
-├── README.md
-├── penetration_test_report.pdf
-├── findings/
-│   ├── sql_injection.md
-│   ├── xss_vulnerability.md
-│   ├── lfi_path_traversal.md
-│   └── information_disclosure.md
-└── tools/
-    ├── payloads.txt
-    └── scan_results/
-```
-
----
 
 *This assessment was conducted in a controlled environment on an intentionally vulnerable target. All findings are documented for educational and remediation purposes.*
